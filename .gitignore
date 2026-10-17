@@ -1,0 +1,22 @@
+# Raw/redistributable data and derived stage artifacts
+/data/raw/*
+!/data/raw/.gitkeep
+/artifacts/*
+!/artifacts/.gitkeep
+/outputs/
+*.parquet
+*.feather
+*.joblib
+*.pkl
+*.pickle
+*.npz
+# local env and checkpoint state
+.env
+.env.*
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+.DS_Store
