@@ -1,15 +1,26 @@
+# Update: Stage 06 evaluation + 07A robustness
+
+- Selected final 06A/06A2/06B/06C notebooks and completed 07A robustness candidate study.
+- Removed Persian-language explanatory Markdown from **all 11 included notebooks**; preserved code cells, output values, and execution metadata.
+- Made 07A paths environment-configurable and preserved previous Stage-06 portability edits.
+- Upgraded published README and static prepublication checks.
+- Does not contain upstream datasets, caches, trained models, or large artifacts.
+- **Not rerun** after path/Markdown edits.
+
 # Release notes
 
-## Initial GitHub release — code and recorded notebook outputs
+## Stage 06 — Full intervention evaluation and representation amplification
 
-- Included 6 research notebooks in two thematic directories (`interventions`, `raw_models`).
-- Preserved numerical computations, intervention design, model settings and previously recorded output cells.
-- Replaced machine-specific training CSV and artifact root path definitions with portable environment-variable fallbacks.
-- Redacted local home-directory prefixes **only in historical displayed outputs and explanatory Markdown**; no numeric results or embedded images were changed.
-- Added rigorous README describing prior-stage dependencies, full/pilot evidence and scientific limitations.
-- Did **not** run/recompute any model or intervention after repackaging.
-- No raw CSV, weight files, Parquet data, calibration caches or transport banks are included.
+- Added **four selected, completed notebooks** (06A, 06A2, 06B, 06C) under `notebooks/intervention_evaluation/`; older/failing development variants were excluded.
+- Extended the README workflow, dependencies, results and scientific interpretation limits.
+- Updated `pre_publish_check.py` to validate the ten published notebooks.
+- Extended `check_inputs.py` to report upstream prerequisites for stage 06.
+- Changed only the stage-06 notebooks' machine-specific **filesystem configuration**, and the corresponding explanatory Markdown example, not the fitted model settings or intervention/effect calculations.
+- Retained original notebook output cells and their reported numerical results; redacted old macOS home-directory prefixes from historical text outputs.
+- **No stage-06 notebook was re-executed** after the portability edits. Stored stage gates relate to prior local runs.
+- No CSV/parquet data, trained model artifacts, large transport banks, logs or local output directories are included in this update.
 
-### Integrity note
+## Initial release — Stages 04 and 05
 
-The notebooks' historical output cells document runs completed **before** portability edits. Re-execute in your own environment before claiming a fully reproduced clean run of this release.
+- Published six notebooks for outage piloting, directed class-pair support, transport bank creation, raw-feature modeling and nested calibration.
+- Kept notebook results while omitting dataset and derived artifacts.
